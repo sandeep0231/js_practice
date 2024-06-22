@@ -346,6 +346,12 @@ In summary, Redux is beneficial for large applications because it provides a str
 ==============================================================================================================================
 ###) What are React Fragments? How and why would you use them in your components?
 
+React Fragments are a feature in React that allows you to group multiple children elements under a single parent element without adding extra nodes to the DOM.
+They are especially useful when you need to return multiple elements from a component's render method but don't want to introduce unnecessary divs or other elements just for wrapping.
+How to Use React Fragments::
+Using <React.Fragment> or Short Syntax <>...</>
+==============================================================================================================================
+==============================================================================================================================
 ###) Explain the concept of reconciliation in React. What strategies can you employ to optimize reconciliation performance?
 
 ###) Discuss the differences between controlled and uncontrolled components in React forms. When would you use each type?
