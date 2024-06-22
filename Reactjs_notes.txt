@@ -370,6 +370,7 @@ Why Use React Fragments:::
 
 In React, reconciliation refers to the process of comparing the virtual DOM (representing the desired UI state) with the real DOM and determining the minimal set of changes required to update the real DOM to match the virtual DOM. This process is crucial for React's efficient rendering and ensuring that the UI reflects the application's state accurately.
 
+Concept of Reconciliation:::
 
 ==============================================================================================================================
 ==============================================================================================================================
