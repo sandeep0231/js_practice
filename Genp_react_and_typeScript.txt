@@ -1,0 +1,71 @@
+
+ChatGPT
+For a Genpact interview related to ReactJS, it's essential to have a good grasp of both fundamental concepts and more advanced topics. Here are some important topics you should focus on:
+
+React Basics:
+
+JSX (JavaScript XML) syntax
+Components (Functional and Class components)
+Props and state
+Event handling
+Conditional rendering
+Lists and keys
+Hooks:
+
+useState
+useEffect
+useContext
+Custom hooks
+Component Lifecycle:
+
+Class component lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount)
+Effect hook (useEffect)
+State Management:
+
+Context API for state management
+Redux (basic understanding if applicable)
+Routing:
+
+React Router (setting up routes, nested routes, route parameters)
+Forms:
+
+Controlled vs. Uncontrolled components
+Form handling in React
+HTTP Requests:
+
+Fetch API or libraries like Axios for making HTTP requests
+Handling API responses (async/await)
+Styling in React:
+
+CSS Modules
+Styled-components or other CSS-in-JS solutions
+Error Handling:
+
+Error boundaries
+Handling errors in asynchronous code
+Performance Optimization:
+
+Memoization (useMemo, useCallback)
+Virtual DOM and its importance
+Testing:
+
+Unit testing with Jest and React Testing Library
+Snapshot testing
+Advanced React Patterns:
+
+Higher-order components (HOCs)
+Render props
+Compound components
+Deployment:
+
+Build process with tools like Webpack or Create React App
+Deployment strategies
+Best Practices and Design Patterns:
+
+Separation of concerns
+Component reusability
+Code organization
+Latest React Features:
+
+Concurrent Mode and Suspense
+React Router v6 (if applicable)
