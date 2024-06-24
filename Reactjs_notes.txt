@@ -509,7 +509,24 @@ Choosing between controlled and uncontrolled components depends on your specific
 ==============================================================================================================================
 ###) How does React handle lifecycle methods in functional components? What are the equivalents of componentDidMount and componentDidUpdate in functional components with hooks?
 
+In React functional components, you can manage side effects and lifecycle events using the useEffect hook. Here’s how it maps to the traditional lifecycle methods like componentDidMount and componentDidUpdate:
+  Equivalent of componentDidMount:::-
+In class components, componentDidMount is invoked after a component is mounted (inserted into the tree). In functional components, you achieve the same effect using useEffect with an empty dependency array ([]). This ensures that the effect runs only once, after the initial render.
 
+Equivalent of componentDidUpdate:::-
+For componentDidUpdate, which runs after a component updates and the DOM has been updated, you can use useEffect with a dependency array that includes the state variables or props you want to monitor for changes.
+
+Cleaning Up Effects::-
+Both componentDidMount and componentDidUpdate may involve cleanup operations (like removing event listeners or canceling network requests). You can perform cleanup in a useEffect by returning a function. This function will be called when the component unmounts (for componentDidMount-like effects) or before applying the next effect (for componentDidUpdate-like effects).
+
+Summary
+componentDidMount equivalent:: Use useEffect(() => {}, []) to run code after the component mounts.
+componentDidUpdate equivalent:: Use useEffect(() => {}, [dependencies]) to run code after the component updates.
+Cleanup:: Return a function from useEffect to clean up after effects, similar to componentWillUnmount in class components.
+
+
+==============================================================================================================================
+==============================================================================================================================
 ###) Describe the role of React Router in a React application. How would you implement nested routing using React Router v5 or v6?
 
 ###) What are the benefits of using TypeScript with React? How does TypeScript enhance the development process in a React project?
