@@ -527,6 +527,19 @@ Cleanup:: Return a function from useEffect to clean up after effects, similar to
 
 ==============================================================================================================================
 ==============================================================================================================================
+###) What is custom hooks explain ?
+In React, custom hooks are JavaScript functions whose names start with use and that may call other hooks. They allow you to extract component logic into reusable functions, enabling you to share stateful logic between components without changing your component hierarchy.
+Key Points to Remember:::
+Reuse Logic:: Custom hooks enable you to reuse complex stateful logic across multiple components without duplicating code.
+
+Dependency Array:: When using built-in hooks like useState or useEffect inside custom hooks, ensure you include their dependencies in the dependency array to avoid bugs related to stale closures.
+
+Naming:: Always name your custom hooks with a use prefix to follow the convention and allow React to recognize them as hooks.
+
+State and Side Effects:: Custom hooks can manage local state and handle side effects, just like regular React components.
+
+==============================================================================================================================
+==============================================================================================================================
 ###) Describe the role of React Router in a React application. How would you implement nested routing using React Router v5 or v6?
 
 ###) What are the benefits of using TypeScript with React? How does TypeScript enhance the development process in a React project?
