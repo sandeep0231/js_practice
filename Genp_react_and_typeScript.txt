@@ -1,6 +1,6 @@
 For a Genpact interview related to ReactJS, it's essential to have a good grasp of both fundamental concepts and more advanced topics. Here are some important topics you should focus on:
 ===============REACT JS======================
-React Basics:-------------
+React Basics:----------------------------
 
 JSX (JavaScript XML) syntax
 Components (Functional and Class components)
@@ -8,12 +8,12 @@ Props and state
 Event handling
 Conditional rendering
 Lists and keys
-Hooks:-------------
 
+Hooks:------------------------------
 useState
 useEffect
 useContext
-Custom hooks
+Custom hooks   
 
 Component Lifecycle:--------------------------
 Class component lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount)
