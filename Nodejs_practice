@@ -1,1 +1,8 @@
-!) Working of Nodejs -> https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
+*) Working of Nodejs -> https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
+                        https://www.youtube.com/watch?v=mR1SQn5nDIA
+                        https://www.youtube.com/watch?v=_eJ6KAb56Gw
+====================================================================================================================================
+*) Node js is a single threaded,non blocking Event driven, run time enviroment.
+
+
+
