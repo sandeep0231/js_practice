@@ -29,16 +29,16 @@ React Router (setting up routes, nested routes, route parameters)
 Forms:----------------------------
 Controlled vs. Uncontrolled components
 Form handling in React
-HTTP Requests:
 
+HTTP Requests:------------------------------
 Fetch API or libraries like Axios for making HTTP requests
 Handling API responses (async/await)
 
 Styling in React:---------------------------
 CSS Modules
 Styled-components or other CSS-in-JS solutions
-Error Handling:
 
+Error Handling:------------------------------------
 Error boundaries
 Handling errors in asynchronous code
 
