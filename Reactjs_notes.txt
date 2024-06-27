@@ -552,3 +552,5 @@ State and Side Effects:: Custom hooks can manage local state and handle side eff
 
 ###) Discuss the importance of code splitting in a React application. How would you implement code splitting using React.lazy() and Suspense?
 ###) How many hooks in react Explain it ?
+###) What Is A Compound Component? 
+###) What is Render props ?
