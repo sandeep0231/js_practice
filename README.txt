@@ -1,5 +1,4 @@
 // let palindrome = 12321;
-
 function palindromCheck(number) {
    let reversed = 0;
   let original = number;
@@ -13,26 +12,25 @@ function palindromCheck(number) {
 
 console.log(palindromCheck(121));
 
-console.log("-------------------------------------------");
-
+//==========================================================================================================================================
 const arr =[1,2,3,4,5,6,9];
-console.log("original array : ", arr);
+console.log("original array : ", arr);   //original array :  [1, 2, 3, 4,5, 6, 9]
 
 const sliceArr =  arr.slice(1,3);
-console.log("sliceArr : ", sliceArr);
-console.log("AFTER slice a  array : ",arr );
+console.log("sliceArr : ", sliceArr); //sliceArr :  [ 2, 3 ]
+console.log("AFTER slice a  array : ",arr ); // AFTER slice a  array : [1, 2, 3, 4,5, 6, 9]
 
 console.log("-----------------SPLICE  array --------------------------");
 
-
 const SpliceArr = arr.splice(1,3);
-console.log("SpliceArr : ", SpliceArr);
-console.log("After Splice a orginal  array : " , arr);
+console.log("SpliceArr : ", SpliceArr); //[2,3,4]
+console.log("After Splice a orginal  array : " , arr);  // [ 1, 5, 6, 9 ]
 
-console.log("Check the type of array :  ", typeof arr);
+console.log("Check the type of array :  ", typeof arr);  //object
 
 console.log("-------------------------------------------");
 
+//==========================================================================================================================================
 const lang =["js","php","python","react","node"];
 const dbs = ["mysql","mongodb","dynamoDB","postgress","mssql"];
   
@@ -48,11 +46,10 @@ const newConcatArr =  lang.concat(dbs);
 // console.log("Merge the array with concat : ",newConcatArr);
 const SpredArr = [...lang,...dbs];
 console.log("Merge array with  Spred oprator : " , SpredArr);
-
 console.log("-------------------------------------------");
 
+//==========================================================================================================================================
 const FArr =[1,2,4,5,[9,90],50,[6,7,[76,43,21],8]];
-
 // note:- If we have a nested array and we want to make it a flat array so we can use flat() function to create a flat array.
 // If we have n number of nested array into a array so that case we just pass the Infinity as a parameter for flat() function 
 
@@ -60,28 +57,29 @@ const flatArr = FArr.flat(Infinity);
 // const flatArr = FArr.flat(2);  //we can pass the number also according to number of nested 
 console.log("FLAT ARRAY : ", flatArr);
 
-console.log("-------------------------------------------");
 
+//==========================================================================================================================================
 // note:- to check is array or not we can just use a Array.isArray() function and it return a true or false output
-
 let chkArr=[2,3,4];
+console.log("To check isArray : " , Array.isArray(chkArr)); //true
 
-console.log("To check isArray : " , Array.isArray(chkArr));
 
+//==========================================================================================================================================
 console.log("----to create a array from a str----------");
 // note:- when we want to create a array from a particular string we can use the Array.from() function like this:
 const FormStr = "Sandeep";
 console.log("str to array conversation : ", Array.from(FormStr));
 
-
+//==========================================================================================================================================
 console.log("----Array.of()----------");
 // note:- Array.of() is use for  create a array of multiple variables like:
 let a = 10;
 let b = 20;
 let c = 30;
-console.log("Create a Array of variables : ", Array.of(a,b,c));
+console.log("Create a Array of variables : ", Array.of(a,b,c)); //[ 10, 20, 30 ]
 
 
+//==========================================================================================================================================
 console.log("-------------Get Obj Keys --------------");
 let obj = {
     name:"sandeep",
@@ -95,29 +93,27 @@ console.log(Object.keys(obj));
 console.log("-------------Get Obj Values --------------");
 console.log(Object.values(obj));
 
+//==========================================================================================================================================
 console.log("-----------Obj entries use ----------");
 // note:- Object.entries use for create an Array of [key value] pairs form Object.
 console.log(Object.entries(obj));
 
+//==========================================================================================================================================
 console.log("-------------hasOwnProperty--------------");
 // note:- hasOwnProperty() :- is a method that returns a Boolean indicating whether an object has a property with the specified name.
 
 console.log(obj.hasOwnProperty("isActive")); //checking a property into a object it's object property or not and return bool value.
 
-console.log("-------------------------------------------");
 
-
-
-
-
-
+//==========================================================================================================================================
 function test(username) {
     return username;
 }
 console.log(test());
 // note:- when we do not pass the argument into a function in that case function return undefined. (but if we already pass a default value for a parameter then it will never return a undefined value.)
-console.log("--------------------------------------");
 
+
+//==========================================================================================================================================
 // Fabonachi series print ->
 function FeboFunc(num){
     let num1 =0; let num2=1; let nextnum;
@@ -131,49 +127,51 @@ function FeboFunc(num){
     return Arr;
 }
 console.log(FeboFunc(10));
-console.log("--------------------------------------");
 
-// note:- when we are checking a scope in window console environment there different Global Scope and in a code environment Global scope is a different things.
 
-// ----------------------------------------------
+//==========================================================================================================================================
+// IMP NOTE:- when we are checking a scope in window console environment there different Global Scope and in a code environment Global scope is a different things.
 
 // const fun =  () => {
 //     return  "test";
 // }
 // console.log(fun());
 
-// ------------------------------------------------
-// note:- When we print/console the `this` keyword  in a node environment(Global) it will console a empty object just because of in node global environment current time does not have a current data reference.
-// note:- but when we console "this" keywork in a window environment then it will console the the windows object inside a console. 
+//IMP NOTE:- When we print/console the `this` keyword  in a node environment(Global) it will console a empty object just because of in node global environment current time does not have a current data reference.
+
+//IMP NOTE:- but when we console "this" keywork in a window environment then it will console the the windows object inside a console. 
  console.log(this); 
  
- 
-//  implicit and explicit in function-
+
+//========================================================================================================================================= 
+//  Implicit and Explicit in Function---
 const FunOne = (num1,num2) => (num1+num2);
 console.log("implicit : ",FunOne(2,4));
-// note:- This approach is called implicit return  (when we do not need to use return keyword and wrap output with () called implicit return function.)
+// NOTE:- This approach is called implicit return  (when we do not need to use return keyword and wrap output with () called implicit return function.)
+
 // ---------------------------------------------------
 const FunTwo = (num1,num2) =>{
     return num1+num2;
 }
 console.log("explicit : ",FunTwo(2,3));
-// note:- This approach is called explicit return  (when we  need to use return keyword with curly brasses called explicit return function.)
+// NOTE:- This approach is called explicit return  (when we  need to use return keyword with curly brasses called explicit return function.)
 
+
+//==========================================================================================================================================
 console.log("-----Immediately Invoked Function Expressions IIFE----");
 
 // syntax of IIFE :- ()();
-
 // Note:- this is use for To avoid the global scope pollutions. (To remove the global scope variables declaration we use IIFE.)
-
 (()=>{ console.log("IIFE function for immediate invocation.");})()
 
-
+//==========================================================================================================================================
 // FOREACH loop
 const ArrLang =["JS","REACT.JS","NODE.JS","MONGODB"];
 ArrLang.forEach((val)=>{ console.log(val)});
 
-
-
+//==========================================================================================================================================
+NOTE:-> 
+Function chaining:-  Function chaining in JavaScript is a technique where multiple methods are chained together on the same object, with each method returning the object itself (or another object with similar methods). 
 
 // -----function chaining--------
    function  Fun() {
@@ -190,8 +188,10 @@ ArrLang.forEach((val)=>{ console.log(val)});
 let fun =   new Fun();
 fun.add(2).print();
 
-// ------------Prototype chaining--------
 
+//==========================================================================================================================================
+NOTE:-> 
+// ------------Prototype chaining--------
 class Vehicle {
    constructor(make,model,year) {
        this.make = make;
@@ -202,7 +202,6 @@ class Vehicle {
    start() {
        console.log(`starting: ${this.make}, ${this.model} , ${this.year}`);
    }
-
 }
 class Car extends Vehicle {
     drive() {
@@ -211,17 +210,15 @@ class Car extends Vehicle {
 }
 
 let  car = new Car('Honda', 'Civic', 2023);
-
 car.drive();
 car.start();
 
 // --------------prototype with function --------------
-console.log("--------------prototype with function --------------");
 function Person(name,age) {
     this.name =name;
-    this.age = age;
-    
+    this.age = age;   
 }
+
 Person.prototype.GreetingFun = function (){
     console.log(`Hello mr. ${this.name} your age is ${this.age}.`);
 }
@@ -234,17 +231,20 @@ Person.prototype.checkAge = function () {
     }
 } 
 
-
  const person = new Person("test",22);
  person.GreetingFun();
  person.checkAge();
- 
-console.log("----------reduce method-------------------");
+ //==========================================================================================================================================
+//NOTE:-
+      reduce method:- The reduce() method in JavaScript is used to reduce an array to a single value/output.
+   
 let rArr = [1,2,3,4]; let initialValue =1;
 const ReduceVal = rArr.reduce((acc,cur)=>
 { return acc*cur },initialValue);
 console.log("ReduceVal:", ReduceVal);
 
+
+//==========================================================================================================================================
 console.log("--------EVENT'S of JS-----");
 
 addEventListner('click',()=>{ /* do some code or logic here*/},false); 
@@ -253,7 +253,7 @@ addEventListner('click',()=>{ /* do some code or logic here*/},false);
 addEventListner('click',()=>{ /* do some code or logic here*/},true);
 // note:- But when we pass true parameter then it will work event capturing.
 
-
+//==========================================================================================================================================
 //  Prototype methods, objects without __proto__
 //  let obj = {
 //      tech:"js"
@@ -263,7 +263,6 @@ addEventListner('click',()=>{ /* do some code or logic here*/},true);
 //  console.log(new_tech.tech);
  
 //  -------call  and this in js-----
-
 
 // let nObj = {
 //     name:"test name",
@@ -324,16 +323,14 @@ addEventListner('click',()=>{ /* do some code or logic here*/},true);
 //     return `${this.username}-321`;
 // }
 
-
 // let OneUser = new User("David","devid@gmail.com",321321);
 
 // console.log("Encript password by function for user one:" ,OneUser.UserPssEncpty());
 
-
 // console.log("created User id by function for one user is:" ,OneUser.CreateUserID());
 
 
-
+//==========================================================================================================================================
 // -------------Class ,super,construnctor,child,extends,inheritance,-------------------------
 
 // class User  {
@@ -372,7 +369,7 @@ addEventListner('click',()=>{ /* do some code or logic here*/},true);
 // console.log(Un instanceof User); //return true
 
 
-
+//==========================================================================================================================================
 // -------geter and seter in JS Object oriented---------
 // note:- when we define a getter it must be define setter as well as if we are not creating a setter we can not use a getter.
 // we have to use both:- get & set
@@ -400,21 +397,23 @@ let OneUsr = new User("admin","321321");
 console.log(OneUsr.password);
 
 
-
+//==========================================================================================================================================
 // 1:-
 // note:- It will create a global exicution context here is two phase one is memory exicution  phase  and code exicution phase.First create a memory exicution phase where all variable and functions and class declare top into a memory exicutio phase so that time age var decrale with undefined value.
 
-console.log("console var:", age);
+console.log("console var:", age); //undefined
 var age = 20;
-console.log("console var:", age);
-// ---------------------------------------------------------
+console.log("console var:", age); //20
+
+//==========================================================================================================================================
 // 2:-
 // note:- will throw the erro can not acces 'test' before initialization just becase of Temporal dead zone concept  apply for let const ina memory exicution .
 // test = 100; 
 // console.log(test);
 // let test =30; 
 // console.log(test);
-// --------------------------------------------------------
+
+//==========================================================================================================================================
 // 3:-
 // first time in memory exicution phase variable declare with myfun with unefined and then it hold the next funtion which value is "secound function" and code exicution time it reinitialize with first funtion whre value is"first function".
 
@@ -430,7 +429,7 @@ console.log("console var:", age);
 
 // myfun();
 
-// --------------------------------------------------------
+//==========================================================================================================================================
 // 4:-
 
 // for(var i=1; i<=10; i++) {
@@ -438,7 +437,7 @@ console.log("console var:", age);
 // }
 
 
-// -------------------------------------------------------
+//==========================================================================================================================================
 // 5:-
 const Obj = {
     name:"test test",
@@ -448,7 +447,8 @@ const Obj = {
     }
 }
 console.log(Obj.echek());
-// -------------------------------------------------------
+
+//==========================================================================================================================================
 // 6:-
 const Person = {
     height:30
@@ -456,12 +456,8 @@ const Person = {
 console.log(Person.height); //30
  delete Person.height;
 console.log(Person.height); //undefined
-// -------------------------------------------------------
 
-
-
-
-
+//==========================================================================================================================================
 let arr =[1,2,3];
 arr[arr.length]=4;
 console.log(arr);
@@ -497,6 +493,7 @@ DlArr.length = DlArr.length-1;
 console.log(DlArr);
 
 //======================CALL BACK EXAMPLE========================================
+NOTE:-callback function is a function that is passed as an argument to another function and is executed after some operation has been completed. Callback functions are a fundamental concept in asynchronous programming and are used extensively in event handling.
 
 const CallBackFun = () =>{
    return "completed Task & called CallBack...";  
@@ -521,3 +518,51 @@ P1.then((res)=>{
 }).catch((err)=>{ 
     console.log("error catch.");
 });
+
+//==========================================================================================================================================
+CALL , APPLY , BIND METHOD'S-->
+
+Call::- Call is a function that helps you change the context of the invoking function.  it helps you replace the value of this inside a function with whatever value you want.
+
+const person = {
+    name: 'Alice',
+    age: 30,
+    introduce: function(gender, profession) {
+        console.log(`My name is ${this.name}, I am ${this.age} years old, and I am ${gender}. I work as a ${profession}.`);
+    }
+};
+person.introduce.call(person, 'female', 'developer');
+// Output: My name is Alice, I am 30 years old, and I am female. I work as a developer.
+//--------------------------------------------------------------------------------------------------------------------------------
+Apply::- Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
+
+const person = {
+    name: 'Alice',
+    age: 30,
+    introduce: function(gender, profession) {
+        console.log(`My name is ${this.name}, I am ${this.age} years old, and I am ${gender}. I work as a ${profession}.`);
+    }
+};
+person.introduce.apply(person, ['female', 'developer']);
+// Output: My name is Alice, I am 30 years old, and I am female. I work as a developer.
+
+//--------------------------------------------------------------------------------------------------------------------------------
+Bind::-
+     Bind is a function that helps you create another function that you can execute later with the new context of this that is provided.
+
+const person = {
+    name: 'Alice',
+    age: 30,
+    introduce: function(gender, profession) {
+        console.log(`My name is ${this.name}, I am ${this.age} years old, and I am ${gender}. I work as a ${profession}.`);
+    }
+};
+
+const introduceAlice = person.introduce.bind(person, 'female', 'developer');
+
+introduceAlice();
+// Output: My name is Alice, I am 30 years old, and I am female. I work as a developer.
+
+
+
+
