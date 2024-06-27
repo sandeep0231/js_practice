@@ -5,4 +5,80 @@
 *) Node js is a single threaded,non blocking Event driven, run time enviroment.
 
 
+====================================================================================================================================
+-------------------------------------------------Event Loop and Event Emitters:---------------------------------
+#) Explain the Node.js event loop and how it enables non-blocking I/O operations. ?
+#) Describe the role of event emitters in Node.js and give examples of when you would use them. ?
 
+------------------------------------------------------Streams----------------------------------------------------
+#) What are Node.js streams? How do readable and writable streams work?
+#)Explain the difference between flowing and paused modes in streams. ?
+
+---------------------------------------------Modules and Module Resolution:-------------------------------------
+#) How does module resolution work in Node.js? What is the difference between require() and ES modules import?
+#) Discuss strategies for structuring and organizing modules in a Node.js application. ? 
+
+--------------------------------------------Error Handling:------------------------------------------------
+#) How does error handling differ in synchronous and asynchronous code in Node.js?
+#) What are best practices for error handling in Node.js applications?
+
+--------------------------------------Callbacks vs. Promises vs. Async/Await:------------------------------
+#) Compare and contrast callbacks, promises, and async/await in Node.js. When would you use each approach?
+#)  How does Node.js handle unhandled promise rejections?
+
+---------------------------------------------------Concurrency and Parallelism:-------------------------------
+#) How does Node.js handle concurrency? Explain the concept of the event loop in relation to concurrency. ?
+#) What strategies can be used to achieve parallelism in Node.js applications? 
+
+----------------------------------------Memory Management:---------------------------------------------------
+#) Discuss strategies for optimizing memory usage in Node.js applications. ? 
+#) What tools and techniques would you use to identify memory leaks in a Node.js application? 
+
+--------------------------------------Performance Monitoring and Tuning:--------------------------------------
+#) How do you measure and monitor the performance of a Node.js application?
+#) Describe techniques for optimizing the performance of I/O-bound and CPU-bound operations in Node.js. ? 
+
+--------------------------------------Express.js Framework:----------------------------------------------------------
+#) What is Express.js? Explain middleware and routing in Express. ?
+#) How would you handle authentication and authorization in an Express.js application? 
+
+-----------------------------------------------RESTful APIs:-------------------------------------------------------
+#) What are the principles of RESTful API design? How would you implement RESTful APIs using Express.js ?
+
+---------------------------------------Websockets and Real-time Communication:-------------------------------------
+#) Explain how Websockets work and how you would implement real-time communication in a Node.js application. ?
+#) Compare Websockets with HTTP long polling for real-time applications. ?
+
+-----------------------------------Database Connectivity:----------------------------------------------------------
+#) How do you connect Node.js applications to databases (e.g., MongoDB, MySQL, PostgreSQL)?
+#) Discuss the use of ORMs/ODMs (e.g., Mongoose, Sequelize) in Node.js applications. When would you choose one over the other?
+
+-----------------------------------Transactions and Consistency:-------------------------------------------------------
+#) How do you manage database transactions in Node.js applications?
+#) What strategies would you use to ensure data consistency in a distributed Node.js application?
+
+---------------------------------------Microservices Architecture:----------------------------------------------------------
+#) Explain the concepts of microservices architecture. How would you design and implement a microservices-based Node.js application?
+
+------------------------------------Containerization and Deployment:-------------------------------------------------------
+#) How do you containerize a Node.js application using Docker?
+#) Discuss strategies for deploying Node.js applications to production environments (e.g., AWS, Azure, Google Cloud). ? 
+
+---------------------------------Unit Testing and Integration Testing:-----------------------------------------------------
+#) How would you write unit tests for a Node.js application? What testing frameworks and libraries are you familiar with ?
+#) Describe your approach to integration testing of Node.js applications. ? 
+
+-----------------------------------------------------Continuous Integration/Continuous Deployment (CI/CD):-------------------------------
+#) Discuss the importance of CI/CD pipelines for Node.js applications. How would you set up a CI/CD pipeline using tools like Jenkins or GitHub Actions?
+
+--------------------------------------Authentication and Authorization:---------------------------------------------
+#) How do you implement secure authentication mechanisms (e.g., JWT) in a Node.js application ?
+#) What security best practices would you follow to protect against common vulnerabilities (e.g., XSS, CSRF) in Node.js applications ?
+
+------------------------------Error Logging and Monitoring:--------------------------------------------------------------------
+#) How do you log errors in a Node.js application? Discuss the use of logging libraries and tools (e.g., Winston, Bunyan). ? 
+#) What monitoring tools would you use to monitor the health and performance of a Node.js application in production ?
+
+------------------------------------------Concurrency Models:--------------------------------------------------------
+#) Compare the concurrency models of Node.js with other programming languages/frameworks (e.g., Java/Spring, Python/Django). ?
+#) When would you choose Node.js over other technologies for building scalable applications?
