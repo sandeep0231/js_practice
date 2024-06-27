@@ -552,6 +552,22 @@ State and Side Effects:: Custom hooks can manage local state and handle side eff
 
 ###) Discuss the importance of code splitting in a React application. How would you implement code splitting using React.lazy() and Suspense?
 ###) How many hooks in react Explain it ?
-###) What Is A Compound Component? 
+
+==============================================================================================================================
+==============================================================================================================================
 ###) What is Render props ?
 With the Render Props pattern, we pass components as props to other components. The components that are passed as props can in turn receive props from that component.
+Render props make it easy to reuse logic across multiple components.
+==============================================================================================================================
+==============================================================================================================================
+###) What is Compound components ?
+ Multiple components come together to serve a common functionality.
+Think of select tag where select and option tag jointly help us create dropdowns.
+React Context APIs plays a very important role in compound pattern.
+Common use cases includes select,dropdown components,or menu items.
+
+
+
+
+
+
