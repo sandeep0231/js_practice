@@ -39,9 +39,9 @@ CSS Modules
 Styled-components or other CSS-in-JS solutions
 
 Error Handling:------------------------------------
-Error boundaries
-Handling errors in asynchronous code
-
+Error boundaries  - getDerivedStateFromError, componentDidCatch
+Handling errors in asynchronous code -> Using try-catch , Error Boundaries
+    
 Performance Optimization:---------------
 Memoization (useMemo, useCallback)
 Virtual DOM and its importance
