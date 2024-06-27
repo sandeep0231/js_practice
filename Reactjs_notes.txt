@@ -554,3 +554,4 @@ State and Side Effects:: Custom hooks can manage local state and handle side eff
 ###) How many hooks in react Explain it ?
 ###) What Is A Compound Component? 
 ###) What is Render props ?
+With the Render Props pattern, we pass components as props to other components. The components that are passed as props can in turn receive props from that component.
