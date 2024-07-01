@@ -138,74 +138,30 @@ Syntax: - let identifier: any = value;
       val = 555;   // OK  
       val = true;   // OK    
 
-8)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+8) Void: - A void is a return type of the functions which do not return any type of value. It is used where no data type is available. A 
+variable of type void is not useful because we can only assign undefined or null to them. An undefined data type denotes uninitialized 
+variable, whereas null represents a variable whose value is undefined.
+Syntax :- let unusable: void = undefined;  
+
+function logMessage(message: string): void {
+    console.log(message);
+}
+
+9) Null and Undefined: - 
+     Null represents a variable whose value is undefined. Much like the void, it is not extremely useful on its own. The Null accepts the 
+only one value, which is null. The Null keyword is used to define the Null type in TypeScript, but it is not useful because we can only 
+assign a null value to it.
+Syntax: - 
+let num: number = null;  
+let bool: boolean = null;   
+let str: string = null;  
+
+The Undefined primitive type denotes all uninitialized variables in TypeScript and JavaScript. It has only one value, which is undefined. 
+The undefined keyword defines the undefined type in TypeScript, but it is not useful because we can only assign an undefined value to it.
+Syntax: - 
+let num: number = undefined;  
+let bool: boolean = undefined;  
+let str: string = undefined;  
 
 
 
