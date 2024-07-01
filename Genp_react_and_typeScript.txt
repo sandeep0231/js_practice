@@ -110,7 +110,7 @@ Optional properties and readonly properties
 
 3) Advanced Types:----------------------------
 Union types and intersection types
-Type guards and type narrowing
+Type guards and type narrowing - NA
 Conditional types (using extends)
 
 4) Functions in TypeScript:----------------------------
