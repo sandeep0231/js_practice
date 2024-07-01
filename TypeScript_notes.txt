@@ -1,1 +1,199 @@
+#) What is TypeScript ?
+ TypeScript is a syntactic superset of JavaScript which adds static typing.This basically means that TypeScript adds syntax on top of 
+JavaScript, allowing developers to add types.
+TypeScript being a "Syntactic Superset" means that it shares the same base syntax as JavaScript, but adds something to it.
+JavaScript is a loosely typed language. It can be difficult to understand what types of data are being passed around in JavaScript.
+In JavaScript, function parameters and variables don't have any information! So developers need to look at documentation, or guess based 
+on the implementation.
+TypeScript uses compile time type checking. Which means it checks if the specified types match before running the code, not while running 
+the code.
+
+Here are some key features and benefits of TypeScript:
+1) Static Typing:: TypeScript introduces static types, enabling developers to catch type-related errors at compile-time rather than 
+runtime. This helps in identifying and fixing issues earlier in the development process.
+
+2) Enhanced Tooling:: TypeScript provides excellent editor support with features like code navigation, auto-completion, and refactoring 
+tools. Editors like Visual Studio Code have built-in TypeScript support, making development more efficient
+
+3) Modern JavaScript Features:: TypeScript supports modern JavaScript features such as classes, interfaces, arrow functions, async/await, 
+and modules, making it suitable for building complex applications.
+
+4) Compatibility:: TypeScript is designed to be compatible with existing JavaScript code. It allows gradual adoption, so developers can 
+start using TypeScript in parts of their projects without rewriting everything.
+
+5) Open Source and Community-driven:: TypeScript is open source and has a large community contributing to its development. This ensures 
+ongoing support, frequent updates, and a wealth of resources available for learning and troubleshooting.
+
+===========================================================================================================================================
+#) Type annotations and type inference:--  In TypeScript, type annotations and type inference are important concepts that help developers 
+specify and understand the types of values in their code.
+
+Type Annotations:: - Type annotations in TypeScript are explicit declarations where you specify the type of a variable, function 
+parameter, or function return value. They provide clarity about the expected types and help TypeScript catch type-related errors during 
+development. 
+EXAMPLE::-
+// Variable annotation
+let myNumber: number = 10;
+let myString: string = "Hello";
+
+// Function parameter annotations
+function addNumbers(x: number, y: number): number {
+    return x + y;
+}
+
+// Function return type annotation
+function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+
+Type Inference:: -  Type inference is TypeScript’s ability to automatically deduce the type of a variable, parameter, or function return 
+value based on its initialization or usage. TypeScript analyzes the values assigned and how they are used to determine the most 
+appropriate type.
+EXAMPLE:: -
+      // Type inference for variables
+let myNumber = 10; // TypeScript infers myNumber is of type number
+let myString = "Hello"; // TypeScript infers myString is of type string
+
+// Type inference for function return type
+function addNumbers(x: number, y: number) {
+    return x + y; // TypeScript infers the return type is number
+}
+
+// Type inference for function parameters
+function logMessage(message: string) {
+    console.log(message);
+}
+
+logMessage("Hello, TypeScript!"); // TypeScript infers the argument is of type string
+
+           -When to Use Annotations vs. Inference:-
+Annotations: Use type annotations when you want to explicitly specify types for variables, function parameters, or return values. This is 
+useful for documenting your code and ensuring type safety in more complex scenarios.
+
+Inference: TypeScript’s type inference is powerful and often sufficient for simpler cases where types can be easily deduced from 
+initialization or usage. It reduces verbosity in your code and improves readability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
