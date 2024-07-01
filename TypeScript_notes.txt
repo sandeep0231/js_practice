@@ -341,6 +341,7 @@ type PersonProps = ExtractPropertyType<Person, "name" | "age">;
 
 
 ===========================================================================================================================================
+#) Typing function parameters and return types ? 
 
 
 
