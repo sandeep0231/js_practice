@@ -203,11 +203,30 @@ structure to objects.
 
 Types : - In TypeScript, type is a more flexible construct that can represent any valid TypeScript type. It can describe primitive types, 
 union types, tuple types, function types, and more complex types.
+Syntax: -
+   type Point = {
+    x: number;
+    y: number;
+};
 
+type Shape = "circle" | "square" | "triangle";
+type Logger = (message: string) => void;
 
+Usage: -
 
+let point: Point = { x: 10, y: 20 };
+let shape: Shape = "circle";
+let logMessage: Logger = (message) => {
+    console.log(message);
+};
 
+logMessage("Hello, TypeScript!"); // Outputs: Hello, TypeScript!
 
+Key Points:
+
+*)Types can alias any valid TypeScript type, including primitives, unions, intersections, and even other types.
+T*)hey can be used to create reusable type definitions and combine existing types in various ways.
+*)Types are also a compile-time feature and do not generate any runtime code.
 
 
 
