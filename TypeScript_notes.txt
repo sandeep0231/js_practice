@@ -280,6 +280,25 @@ let p1: Point = { x: 10, y: 20 };
 console.log(p1.x); // Output: 10
 
 
+===========================================================================================================================================
+#) Union types and intersection types ? 
+In TypeScript, union types and intersection types are powerful features that allow you to combine different types in various ways, 
+providing flexibility and expressiveness in your type definitions.
+
+a) Union Types (|) : - Union types are used when a value can be more than a single type. Such as when a property would be string or number.
+They are defined using the `|` operator between the types.
+Syntax : -  type MyType = Type1 | Type2 | Type3;
+
+EXAMPLE : -
+type ID = string | number;
+function printID(id: ID) {
+    console.log(id);
+}
+printID("abc"); // Valid
+printID(123);   // Valid
+printID(true);  // Error: Argument of type 'boolean' is not assignable to parameter of type 'ID'.
+
+
 
 
 
