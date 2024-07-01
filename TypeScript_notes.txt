@@ -247,4 +247,44 @@ are used to describe the shape of an object. Types use the type keyword for crea
 for declaring an interface.
 
 
+===========================================================================================================================================
+#) Optional properties and readonly properties : - 
+ Optional Properties :- Optional properties are properties that may or may not be present in an object. They are denoted by placing a ? 
+after the property name in the interface definition.
+EXAMPLE : - 
+ interface Person {
+    name: string;
+    age?: number; // Optional property
+}
+
+const person1: Person = {
+    name: 'Alice',
+    age: 30,
+};
+
+const person2: Person = {
+    name: 'Bob',
+    // age is optional and can be omitted
+};
+
+Readonly Properties : - Readonly properties are properties that can only be initialized once and cannot be changed afterward. They are 
+denoted using the readonly keyword.
+EXAMPLE : -  
+          interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+
+let p1: Point = { x: 10, y: 20 };
+// p1.x = 5; // Error: Cannot assign to 'x' because it is a read-only property
+console.log(p1.x); // Output: 10
+
+
+
+
+
+
+
+
+
 
