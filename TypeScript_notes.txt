@@ -228,10 +228,19 @@ Key Points:
 T*)hey can be used to create reusable type definitions and combine existing types in various ways.
 *)Types are also a compile-time feature and do not generate any runtime code.
 
+--------:::Choosing Between Interfaces and Types::----
+Use Interfaces When: - 
+
+a) Defining the structure of an object or class.
+B) Needing to extend or implement from another interface.
+
+Use Types When: - 
+a) Creating reusable type aliases.
+b) Working with union types, intersection types, or more complex type combinations.
+c) Describing types that cannot be represented with interfaces, such as primitive types or union types.
 
 
-
-
+===========================================================================================================================================
 
 
 
