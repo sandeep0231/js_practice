@@ -73,28 +73,72 @@ useful for documenting your code and ensuring type safety in more complex scenar
 Inference: TypeScript’s type inference is powerful and often sufficient for simpler cases where types can be easily deduced from 
 initialization or usage. It reduces verbosity in your code and improves readability.
 
+===========================================================================================================================================
+#) In TypeScript, type assertions (also known as type casting in some other languages) are a way to tell the compiler that you know more 
+about the type of a value than TypeScript does. It is useful when you know the type of a value could be more specific than its current 
+inferred type, or when you need to convert a type in a way that TypeScript cannot automatically infer.
 
+Type Assertions
+Type assertions have two forms in TypeScript:
 
+1) Angle-bracket syntax:-
+let someValue: any = "this is a string";
+let strLength: number = (<string>someValue).length;
 
+2) As-syntax (preferred in TypeScript):-
+let someValue: any = "this is a string";
+let strLength: number = (someValue as string).length;
 
+Examples of Basic Types:::--
+1) String:- use the string data type to represents the text in TypeScript.String type work with textual data. We include string literals 
+in our scripts by enclosing them in single or double quotation marks.
+Syntax: - let myName: string = "John Doe";
 
+2) Number: - Like JavaScript, all the numbers in TypeScript are stored as floating-point values. These numeric values are treated like a 
+number data type. The numeric data type can be used to represents both integers and fractions.
+Syntax: - let first: number = 12.0;  let myAge: number = 30;
 
+3) Boolean: - The string and numeric data types can have an unlimited number of different values, whereas the Boolean data type can have 
+only two values. They are "true" and "false."
+Syntax: -  let isStudent: boolean = true;
 
+4) Arrays: -An array is a collection of elements of the same data type. Like JavaScript, TypeScript also allows us to work with arrays of 
+values.
+Syntax: - 
+let numbers: number[] = [1, 2, 3, 4];
+let fruits: Array<string> = ["Apple", "Banana", "Orange"];
 
+5) Tuples: - The Tuple is a data type which includes two sets of values of different data types. It allows us to express an array where 
+the type of a fixed number of elements is known, but they are not the same. For example, if we want to represent a value as a pair of a 
+number and a string, then it can be written as:
+Syntax: - 
+// Declare a tuple  
+let a: [string, number];  
+  
+// Initialize it  
+a = ["hi", 8, "how", 5]; // OK 
 
+6) Enums: -  Enums stands for Enumerations.Enums are a new data type supported in TypeScript. It is used to define the set of named 
+constants, i.e., a collection of related values. TypeScript supports both numeric and string-based enums. We can define the enums by using 
+the enum keyword.
+Syntax: -
+ enum Color {
+    Red,
+    Green,
+    Blue,
+}
+let myColor: Color = Color.Green;
 
+7) Any: - It is the "super type" of all data type in TypeScript. It is used to represents any JavaScript value.It allows us to opt-in and 
+opt-out of type-checking during compilation. If a variable cannot be represented in any of the basic data types, then it can be declared 
+using "Any" data type. Any type is useful when we do not know about the type of value (which might come from an API or 3rd party library), 
+and we want to skip the type-checking on compile time.
+Syntax: - let identifier: any = value;
+1. let val: any = 'Hi';  
+      val = 555;   // OK  
+      val = true;   // OK    
 
-
-
-
-
-
-
-
-
-
-
-
+8)
 
 
 
