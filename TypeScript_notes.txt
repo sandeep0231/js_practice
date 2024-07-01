@@ -342,30 +342,83 @@ type PersonProps = ExtractPropertyType<Person, "name" | "age">;
 
 ===========================================================================================================================================
 #) Typing function parameters and return types ? 
+In TypeScript, specifying function parameters and return types helps in ensuring type safety and clarity in your code. Here’s how you can 
+define them:
+
+Function Parameters:-
+To define function parameters with types in TypeScript, you specify the parameter name followed by a colon and then the type:
+function greet(name: string, age: number): void {
+    console.log(`Hello, ${name}! You are ${age} years old.`);
+}
+
+Return Types: -
+To specify the return type of a function in TypeScript, you use a colon followed by the type after the closing parenthesis of the parameter 
+list:
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+Void Return Type :-If a function does not return any value, you can specify the void return type.
+function log(message: string): void {
+    console.log(message);
+}
 
 
+===========================================================================================================================================
+#) Optional and default parameters : -
+
+a) Optional Parameters :- Optional parameters allow you to specify parameters that may or may not be provided when calling the function. 
+You denote an optional parameter by appending a question mark ? after the parameter name in the function declaration
+EXAMPLE :-
+function greet(name: string, message?: string): void {
+    if (message) {
+        console.log(`${message}, ${name}!`);
+    } else {
+        console.log(`Hello, ${name}!`);
+    }
+}
+
+greet('Alice'); // Output: Hello, Alice!
+greet('Bob', 'Hi'); // Output: Hi, Bob!
 
 
+Default Parameters :- Default parameters allow you to specify default values for parameters if no value or undefined is passed when calling 
+the function. You specify a default parameter by assigning a value directly in the function declaration
+EXAMPLE :-
+ function greetDefault(name: string, message: string = 'Hello'): void {
+    console.log(`${message}, ${name}!`);
+}
+
+greetDefault('Alice'); // Output: Hello, Alice!
+greetDefault('Bob', 'Hi'); // Output: Hi, Bob!
 
 
+===========================================================================================================================================
+#)Function overloading ?
+In TypeScript, function overloading allows you to define multiple function signatures for the same function name. This is particularly 
+useful when you want a single function to handle different types or numbers of parameters differently. 
+
+EXAMPLE :- 
+function display(x: number): void;
+function display(s: string): void;
+function display(arg: any): void {
+    if (typeof arg === 'number') {
+        console.log(`Number: ${arg}`);
+    } else if (typeof arg === 'string') {
+        console.log(`String: ${arg}`);
+    } else {
+        console.log(`Unsupported type`);
+    }
+}
+
+// Calling the overloaded function
+display(123); // Output: Number: 123
+display("Hello"); // Output: String: Hello
+display(true); // Output: Unsupported type
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+===========================================================================================================================================
+#)
 
 
 
