@@ -164,26 +164,45 @@ let bool: boolean = undefined;
 let str: string = undefined;  
 
 
+===========================================================================================================================================
+#) Interfaces and Types ::: - 
+In TypeScript, interfaces and types are used to define the shape or structure of data, allowing developers to specify the expected 
+structure of objects, functions, and other data types within their codebase. While they serve similar purposes, there are some differences 
+in how they can be used.
+
+Interfaces : -  Interfaces in TypeScript are primarily used to define object types. They describe the properties and methods that an 
+object should have. Interfaces can also be extended to create new interfaces, providing a way to build on existing definitions.
+Sytax: - 
+interface Person {
+    firstName: string;
+    lastName: string;
+    age: number;
+    greet(): string;
+}
+Usage: -  
+function greetPerson(person: Person) {
+    return `Hello, ${person.firstName} ${person.lastName}!`;
+}
+let myPerson: Person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    greet() {
+        return "Hi there!";
+    }
+};
+console.log(greetPerson(myPerson)); // Outputs: Hello, John Doe!
+
+Key Points:
+
+*)Interfaces are purely a compile-time construct and do not generate any JavaScript code. They are used for type checking and providing 
+structure to objects.
+*)Interfaces can be extended and can inherit from multiple other interfaces.
+*)They are often used for defining contracts that objects must adhere to.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Types : - In TypeScript, type is a more flexible construct that can represent any valid TypeScript type. It can describe primitive types, 
+union types, tuple types, function types, and more complex types.
 
 
 
