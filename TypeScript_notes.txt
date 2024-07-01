@@ -298,6 +298,216 @@ printID("abc"); // Valid
 printID(123);   // Valid
 printID(true);  // Error: Argument of type 'boolean' is not assignable to parameter of type 'ID'.
 
+b) Intersection Types (&) : - Intersection types allow you to combine multiple types into one. The resulting type will have all properties 
+that exist in all of the constituent types.
+Syntax: -  type MyType = Type1 & Type2 & Type3;
+EXAMPLE : -
+   interface Car {
+    brand: string;
+    model: string;
+}
+
+interface Electric {
+    batteryCapacity: number;
+}
+type ElectricCar = Car & Electric;
+const myCar: ElectricCar = {
+    brand: "Tesla",
+    model: "Model S",
+    batteryCapacity: 100
+};
+
+Key Differences:
+Union Types (|): A value of a union type can be of any of the specified types.
+Intersection Types (&): A value of an intersection type has all of the specified types combined.
+
+===========================================================================================================================================
+#) Conditional types (using extends) ?
+Conditional types in TypeScript are a powerful feature that allows you to create types that depend on other types. They are typically 
+defined using the extends keyword within a conditional block (T extends U ? X : Y). This syntax enables TypeScript to infer types based on 
+the evaluation of type relationships.
+Basic Syntax: -   type MyConditionalType<T> = T extends U ? X : Y;
+
+Example : - 
+type ExtractPropertyType<T, K extends keyof T> = K extends keyof T ? T[K] : never;
+interface Person {
+    name: string;
+    age: number;
+    address: string;
+}
+
+type PersonProps = ExtractPropertyType<Person, "name" | "age">;
+// PersonProps is string | number, because "name" | "age" are keys of Person
+
+
+===========================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
