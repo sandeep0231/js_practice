@@ -431,6 +431,7 @@ TypeScript, being a superset of JavaScript, adds strong typing and class-based s
 prototype-based inheritance.
 
 --------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 1) Creating classes with typed properties and methods : - Creating classes with typed properties and methods in 
 TypeScript involves specifying 
 the types of properties and method parameters to leverage TypeScript's static type checking and IntelliSense 
@@ -458,6 +459,8 @@ class Person {
 // Creating an instance
 let person = new Person("Alice", 30);
 person.greet("Hello");  // Output: Hello, my name is Alice and I am 30 years old.
+
+--------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------
 2)Access modifiers (public, private, protected) : - TypeScript access modifiers are keywords that affect the 
 visibility of class members such as properties and methods. They decide who has access to these members and where 
@@ -504,4 +507,77 @@ employee.showDetails();  // Output: Name: Bob, Age: 35, Department: IT
 employee.greet();        // Error: Property 'greet' is private and only accessible within class 'Person'.
 
 
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+3) Abstract classes and interfaces : -
+In TypeScript, abstract classes and interfaces are powerful tools that facilitate the implementation of object-oriented programming 
+principles like abstraction, encapsulation, and polymorphism.
+
+A) Abstract Classes : - Define an abstract class in Typescript using the abstract keyword. Abstract classes are mainly for inheritance
+where other classes may derive from them. We cannot create an instance of an abstract class.
+
+
+EXAMPLE : -
+  abstract class Animal {
+    abstract makeSound(): void; // Abstract method (no implementation)
+    
+    move(): void {
+        console.log("Moving...");
+    }
+}
+
+class Dog extends Animal {
+    makeSound(): void {
+        console.log("Bark bark!");
+    }
+}
+
+let myDog = new Dog();
+myDog.makeSound(); // Output: Bark bark!
+myDog.move();      // Output: Moving...
+
+B) Interfaces : - Interfaces in TypeScript are used to define contracts for objects, specifying properties and methods that a class must implement.
+They are purely a structural contract and cannot contain any implementation code.
+
+interface Shape {
+    calculateArea(): number;
+}
+
+class Circle implements Shape {
+    radius: number;
+
+    constructor(radius: number) {
+        this.radius = radius;
+    }
+
+    calculateArea(): number {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+let circle = new Circle(5);
+console.log(circle.calculateArea()); // Output: 78.54
+
+
+Interfaces:
+Define the structure that classes should adhere to.
+Can extend other interfaces.
+Can be implemented by classes.
+
+Key Points:
+Interfaces are used to define types that can be implemented by classes.
+They do not provide any implementation details; they only define the structure (properties and methods).
+Classes can implement multiple interfaces.
+
+When to Use Abstract Classes vs Interfaces:::::::
+
+Abstract Classes:-- Use when you want to provide a default implementation for some methods and require subclasses to implement others.
+Also, when you want to share code among several closely related classes.
+
+Interfaces:-- Use when you want to define a contract that a class can implement.
+Interfaces are more flexible in terms of allowing a class to implement multiple contracts (interfaces).
+
+
+
+====================================================================================================================
 
