@@ -340,19 +340,22 @@ type PersonProps = ExtractPropertyType<Person, "name" | "age">;
 // PersonProps is string | number, because "name" | "age" are keys of Person
 
 
-===========================================================================================================================================
+===================================================================================================================
 #) Typing function parameters and return types ? 
-In TypeScript, specifying function parameters and return types helps in ensuring type safety and clarity in your code. Here’s how you can 
+In TypeScript, specifying function parameters and return types helps in ensuring type safety and clarity in your 
+code. Here’s how you can 
 define them:
 
 Function Parameters:-
-To define function parameters with types in TypeScript, you specify the parameter name followed by a colon and then the type:
+To define function parameters with types in TypeScript, you specify the parameter name followed by a colon and then 
+the type:
 function greet(name: string, age: number): void {
     console.log(`Hello, ${name}! You are ${age} years old.`);
 }
 
 Return Types: -
-To specify the return type of a function in TypeScript, you use a colon followed by the type after the closing parenthesis of the parameter 
+To specify the return type of a function in TypeScript, you use a colon followed by the type after the closing 
+parenthesis of the parameter 
 list:
 function add(a: number, b: number): number {
     return a + b;
@@ -364,10 +367,11 @@ function log(message: string): void {
 }
 
 
-===========================================================================================================================================
+===================================================================================================================
 #) Optional and default parameters : -
 
-a) Optional Parameters :- Optional parameters allow you to specify parameters that may or may not be provided when calling the function. 
+a) Optional Parameters :- Optional parameters allow you to specify parameters that may or may not be provided when 
+calling the function. 
 You denote an optional parameter by appending a question mark ? after the parameter name in the function declaration
 EXAMPLE :-
 function greet(name: string, message?: string): void {
@@ -382,7 +386,8 @@ greet('Alice'); // Output: Hello, Alice!
 greet('Bob', 'Hi'); // Output: Hi, Bob!
 
 
-Default Parameters :- Default parameters allow you to specify default values for parameters if no value or undefined is passed when calling 
+Default Parameters :- Default parameters allow you to specify default values for parameters if no value or 
+undefined is passed when calling 
 the function. You specify a default parameter by assigning a value directly in the function declaration
 EXAMPLE :-
  function greetDefault(name: string, message: string = 'Hello'): void {
@@ -393,9 +398,10 @@ greetDefault('Alice'); // Output: Hello, Alice!
 greetDefault('Bob', 'Hi'); // Output: Hi, Bob!
 
 
-===========================================================================================================================================
+====================================================================================================================
 #)Function overloading ?
-In TypeScript, function overloading allows you to define multiple function signatures for the same function name. This is particularly 
+In TypeScript, function overloading allows you to define multiple function signatures for the same function name. 
+This is particularly 
 useful when you want a single function to handle different types or numbers of parameters differently. 
 
 EXAMPLE :- 
@@ -417,83 +423,85 @@ display("Hello"); // Output: String: Hello
 display(true); // Output: Unsupported type
 
 
-===========================================================================================================================================
-#)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+====================================================================================================================
+#)-----------------------------------------Classes and OOP in TypeScript-------------------------------------
+Classes and object-oriented programming (OOP) in TypeScript follow many principles similar to other object-oriented 
+languages like Java or C++.
+TypeScript, being a superset of JavaScript, adds strong typing and class-based structures on top of JavaScript's 
+prototype-based inheritance.
+
+--------------------------------------------------------------------------------------------------------------------
+1) Creating classes with typed properties and methods : - Creating classes with typed properties and methods in 
+TypeScript involves specifying 
+the types of properties and method parameters to leverage TypeScript's static type checking and IntelliSense 
+features effectively.
+
+   Basic Class with Typed Properties and Methods :-
+
+class Person {
+    // Typed properties
+    name: string;
+    age: number;
+
+    // Constructor with typed parameters
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Typed method with parameters and return type
+    greet(greeting: string): void {
+        console.log(`${greeting}, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+// Creating an instance
+let person = new Person("Alice", 30);
+person.greet("Hello");  // Output: Hello, my name is Alice and I am 30 years old.
+--------------------------------------------------------------------------------------------------------------------
+2)Access modifiers (public, private, protected) : - TypeScript access modifiers are keywords that affect the 
+visibility of class members such as properties and methods. They decide who has access to these members and where 
+they can get it. 
+
+A)  public (default): Accessible from anywhere in the program,both inside and outside the class. It is the default 
+access modifier for TypeScript class members, so you don't need to explicitly declare it unless you want to 
+emphasize accessibility.
+
+B) private : The private access modifier limits a class member's visibility to the class itself. It promotes 
+encapsulation and data protection by preventing direct access from outside the class.
+Accessible only within the class. 
+
+c)protected : Accessible within the class and its subclasses. but not directly from outside the class hierarchy.
+
+EXAMPLE :-
+
+class Person {
+    private name: string;
+    protected age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+class Employee extends Person {
+    private department: string;
+    constructor(name: string, age: number, department: string) {
+        super(name, age);
+        this.department = department;
+    }
+
+    showDetails() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Department: ${this.department}`);
+    }
+}
+
+let employee = new Employee("Bob", 35, "IT");
+employee.showDetails();  // Output: Name: Bob, Age: 35, Department: IT
+employee.greet();        // Error: Property 'greet' is private and only accessible within class 'Person'.
 
 
 
