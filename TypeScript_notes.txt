@@ -584,10 +584,9 @@ Interfaces are more flexible in terms of allowing a class to implement multiple 
 components that can work with a variety of data types while maintaining type safety. 
 
 
-1. Generic Types
-A generic type is a type that is parameterized over another type. It allows you to define functions, classes, or interfaces that can work with any data type.
-
-Syntax:-
+1. Generic Types :- A generic type is a type that is parameterized over another type. It allows you to define functions, classes,
+or interfaces that can work with any data type.
+Syntax:--
 // Function with generic type
 function identity<T>(arg: T): T {
     return arg;
@@ -602,11 +601,9 @@ let output2 = identity<number>(42);
 Syntax :-
 class GenericClass<T> {
     private value: T;
-
     constructor(value: T) {
         this.value = value;
     }
-
     getValue(): T {
         return this.value;
     }
@@ -615,415 +612,251 @@ class GenericClass<T> {
 // Usage
 let strObj = new GenericClass<string>("hello");
 console.log(strObj.getValue()); // Output: hello
-
 let numObj = new GenericClass<number>(100);
 console.log(numObj.getValue()); // Output: 100
 
 
+3. Generic Interfaces :- The generic type can also be used with the interface.
+Syntax :- 
+interface Pair<T, U> {
+    first: T;
+    second: U;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Usage
+let pair: Pair<number, string> = { first: 1, second: "two" };
+console.log(pair); // Output: { first: 1, second: "two" }
+
+4. Constraints with generics :- Generic Constraints are used to specify limits to the types that can be used with generic type parameters.
+                         You can impose constraints on generics to ensure that certain types are used. 
+
+EXAMPLE :- 
+interface Sports { 
+	name: string; 
+} 
+
+function printSportName<T extends Sports>(sport: T): void { 
+	console.log(sport.name); 
+} 
+let sport: Sports = { name: "baseball" }; 
+printSportName(sport);
+
+...............................................................................................
+Benefits of Generics:
+Type Safety: Helps catch errors at compile-time.
+Code Reusability: Write flexible, reusable components.
+Abstraction: Create more abstract and generalized code.
+
+
+====================================================================================================================
+#)Understanding how TypeScript infers types :-
+
+TypeScript's type inference is the process by which TypeScript determines the types of variables, parameters, and expressions 
+based on their usage and context. Understanding how TypeScript infers types is crucial for writing effective and type-safe
+TypeScript code.
+
+1. Basic Type Inference
+TypeScript uses the following strategies for basic type inference:
+
+Initialization:- TypeScript infers the type of a variable based on its initialization value.
+let num = 10; // TypeScript infers 'num' as 'number'
+let str = "hello"; // TypeScript infers 'str' as 'string'
+
+Contextual Typing: TypeScript infers the type of a variable or expression based on its usage context.
+let numbers = [1, 2, 3]; // TypeScript infers 'numbers' as 'number[]'
+// Function parameter type inference
+function multiply(a: number, b: number) {
+    return a * b;
+}
+let result = multiply(5, 10); // TypeScript infers 'result' as 'number'
+
+
+====================================================================================================================
+#) Using declaration files (.d.ts) for third-party libraries :-
+When working with TypeScript and third-party JavaScript libraries that don't include type definitions (.d.ts files) by
+default, you can create your own declaration files to provide TypeScript with type information.
+This process allows you to enjoy TypeScript's static type checking and IntelliSense features while using external libraries.
+
+1. Understanding Declaration Files :- Declaration files (.d.ts) in TypeScript provide type information about JavaScript code that exists elsewhere,
+typically in libraries or modules written in JavaScript. They contain declarations of types, interfaces, functions, and variables that TypeScript 
+can use to provide type information and ensure type safety when using those libraries.
+
+2. Creating a Declaration File
+If a third-party library lacks TypeScript support, you can create a declaration file to define its types. Here's a step-by-step approach:
+
+Example: jQuery
+Let's assume we want to use jQuery in TypeScript, but jQuery itself doesn't have type definitions included.
+
+Create a .d.ts File: Create a file named jquery.d.ts (or any name you prefer) in your TypeScript project.
+
+Declare the Types: Inside jquery.d.ts, declare the types that jQuery provides. For example:
+
+// jquery.d.ts
+
+// Define the $ and jQuery global variables
+declare var $: JQueryStatic;
+declare var jQuery: JQueryStatic;
+
+// Define the jQuery interface
+interface JQuery {
+    text(): string;
+    text(text: string): this;
+    // Add other methods and properties as needed
+}
+
+// Define the static members (e.g., $.ajax, $.fn)
+interface JQueryStatic {
+    ajax(settings?: JQueryAjaxSettings): JQueryXHR;
+    fn: JQuery;
+    // Add other static methods and properties as needed
+}
+
+// Define additional types as required
+interface JQueryAjaxSettings {
+    // Define properties for jQuery.ajax settings
+}
+
+interface JQueryXHR {
+    // Define properties and methods for jQuery.ajax XHR objects
+}
+
+
+
+====================================================================================================================
+#) Creating enums and their use cases :--
+Enums (short for enumerations) in TypeScript allow you to define a set of named constants. They are useful for representing
+fixed sets of values that are known at compile time.
+Creating Enums:-
+To define an enum in TypeScript, use the enum keyword followed by the name of the enum and a list of named constants 
+inside curly braces {}:
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+In this example:
+Direction is the name of the enum.
+Inside {}, Up, Down, Left, and Right are constants with auto-incrementing numeric values starting from 0 by default.
+
+Customizing Enum Values :-
+You can explicitly set the values of enum members:
+enum FileAccess {
+    Read = 1,
+    Write = 2,
+    ReadWrite = Read | Write,
+    // You can also explicitly set values:
+    Admin = 4,
+}
+
+
+Use Cases for Enums:--
+
+1) Representing Discrete Options :- Enums are ideal for representing a fixed set of options or states. For example, directions 
+(Up, Down, Left, Right), access levels (Read, Write, ReadWrite), or colors (Red, Green, Blue).
+
+2) Configuring Options :- Enums can be used to configure options or settings that have predefined values.
+3) Mapping Numeric or String Values :- Enums can be used to map from numeric or string values back to their symbolic names.
+4) Ensuring Type Safety :- Enums help TypeScript enforce type safety by limiting values to a predefined set. This prevents 
+    accidental misuse or incorrect values.
+
+
+
+====================================================================================================================
+#) String enums and computed enums :--
+
+String Enums :- String enums allow you to assign string values to enum members. They are defined
+using the enum keyword with each member explicitly assigned a string value:
+enum Direction {
+    Up = "UP",
+    Down = "DOWN",
+    Left = "LEFT",
+    Right = "RIGHT"
+}
+
+// Example usage
+let direction: Direction = Direction.Up;
+console.log(direction);  // Outputs: "UP"
+
+
+Computed Enums :- omputed enums allow you to dynamically compute or assign values to enum members. This is achieved by leveraging
+    TypeScript's ability to compute enum values based on expressions:
+
+enum FileAccess {
+    // Constants are computed in the initializer
+    None,           // 0
+    Read = 1 << 1,  // 2
+    Write = 1 << 2, // 4
+    ReadWrite = Read | Write, // 6
+    G = "123".length // 3
+}
+
+// Example usage
+console.log(FileAccess.Read);  // Outputs: 2
+console.log(FileAccess.G);     // Outputs: 3
+
+
+=========================================Modules and Namespaces========================================================================
+#) Creating a Namespace :- To create a namespace in TypeScript, you use the namespace keyword:
+// Shapes.ts
+namespace Shapes {
+    export interface Shape {
+        area(): number;
+    }
+
+    export class Circle implements Shape {
+        constructor(private radius: number) {}
+
+        area(): number {
+            return Math.PI * this.radius ** 2;
+        }
+    }
+
+    export class Square implements Shape {
+        constructor(private sideLength: number) {}
+
+        area(): number {
+            return this.sideLength ** 2;
+        }
+    }
+}
+
+Using Namespaces:
+You can use the entities defined within a namespace by referencing the namespace and its members:
+// app.ts
+/// <reference path="Shapes.ts" />
+
+let myCircle = new Shapes.Circle(5);
+console.log(myCircle.area()); // Outputs: 78.53981633974483
+
+let mySquare = new Shapes.Square(4);
+console.log(mySquare.area()); // Outputs: 16
+
+
+Nesting Namespaces:
+Namespaces can also be nested to further organize code:
+// Geometry.ts
+namespace Geometry {
+    export namespace Shapes {
+        export class Circle {
+            constructor(private radius: number) {}
+
+            area(): number {
+                return Math.PI * this.radius ** 2;
+            }
+        }
+    }
+
+    export namespace Polygons {
+        export class Square {
+            constructor(private sideLength: number) {}
+
+            area(): number {
+                return this.sideLength ** 2;
+            }
+        }
+    }
+}
+
+
+============================================================================================================================================
