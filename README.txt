@@ -586,4 +586,15 @@ abc.print();
 abc.sub(2);
 abc.print();
 
+====================================================
+
+
+function aaa () {
+    return "ab";
+}
+
+let b = new aaa();
+
+console.log(b);
+
 
