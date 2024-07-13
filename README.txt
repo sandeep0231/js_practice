@@ -563,6 +563,27 @@ const introduceAlice = person.introduce.bind(person, 'female', 'developer');
 introduceAlice();
 // Output: My name is Alice, I am 30 years old, and I am female. I work as a developer.
 
+======================================================================================================================================
+#) function chaining : -
 
+var obj = function () {
+    this.i = 0;
+    
+    this.add = function (i) {
+        this.i += i
+    }
+    this.sub = function(i) {
+        this.i -= i
+    }
+    this.print = function(){
+        console.log(this.i);
+    }
+}
+
+var abc = new obj();
+abc.add(4);
+abc.print();
+abc.sub(2);
+abc.print();
 
 
