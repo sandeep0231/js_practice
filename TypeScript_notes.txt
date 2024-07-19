@@ -118,7 +118,7 @@ let a: [string, number];
 // Initialize it  
 a = ["hi", 8, "how", 5]; // OK 
 
-6) Enums: -  Enums stands for Enumerations.Enums are a new data type supported in TypeScript. It is used to define the set of named 
+6) Enums: -  Enums stands for Enumerations. Enums are a new data type supported in TypeScript. It is used to define the set of named 
 constants, i.e., a collection of related values. TypeScript supports both numeric and string-based enums. We can define the enums by using 
 the enum keyword.
 Syntax: -
@@ -129,7 +129,7 @@ Syntax: -
 }
 let myColor: Color = Color.Green;
 
-7) Any: - It is the "super type" of all data type in TypeScript. It is used to represents any JavaScript value.It allows us to opt-in and 
+7) Any: - It is the "super type" of all data type in TypeScript. It is used to represents any JavaScript value. It allows us to opt-in and 
 opt-out of type-checking during compilation. If a variable cannot be represented in any of the basic data types, then it can be declared 
 using "Any" data type. Any type is useful when we do not know about the type of value (which might come from an API or 3rd party library), 
 and we want to skip the type-checking on compile time.
