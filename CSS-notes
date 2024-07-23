@@ -1,1 +1,96 @@
+=========================================CSS QUESTIONS HERE ======================================================
+
+CSS Fundamentals and Selectors:------------------------------------------
+Explain the difference between class and id selectors in CSS. When would you use one over the other?
+How do attribute selectors work in CSS? Provide an example.
+Describe the CSS Box Model and its components.
+
+
+
+
+Responsive Web Design:-------------------------------------------------------------
+What is responsive design, and why is it important? How do you typically approach making a website responsive?
+Explain the use of media queries in CSS for responsive design. Provide an example of a media query you've used in a project.
+
+
+
+
+CSS Layout Techniques:--------------------------------------------------
+Describe different CSS layout techniques you have used in React applications (e.g., Flexbox, Grid). When would you choose one over the other?
+What are the benefits and drawbacks of using CSS Grid versus Flexbox?
+
+
+
+
+CSS Preprocessors and Postprocessors:--------------------------------------------------
+Have you used any CSS preprocessors or postprocessors like Sass, Less, or PostCSS? What advantages do they offer over traditional CSS?
+
+
+
+
+CSS Frameworks and Libraries:-----------------------------------------------------
+Which CSS frameworks have you worked with? Can you compare and contrast Bootstrap and Material-UI in terms of design philosophy and usability in React applications?
+
+
+
+
+CSS Modules and Scoped Styles:-----------------------------------------------------------------
+Explain how CSS Modules work in React. What are the benefits of using scoped styles in a component-based architecture?
+
+
+
+
+Performance and Optimization:----------------------------------------------------------
+How do you optimize CSS performance in a React application? Mention techniques like code splitting, minification, and critical CSS.
+
+
+
+Cross-browser Compatibility:------------------------------------------------------------------------
+How do you ensure cross-browser compatibility when styling a website? What are some challenges you've faced in this area?
+
+
+CSS Best Practices and Architecture:----------------------------------------------------
+What are some best practices for writing maintainable and scalable CSS? How do you organize your CSS files in a large React project?
+
+
+Debugging and Troubleshooting:-----------------------------------------------------
+Describe a challenging CSS issue you encountered in a project. How did you debug and resolve it?
+
+
+New CSS Features:-------------------------------------------------
+Are you familiar with any recent CSS features or specifications (e.g., CSS Variables, CSS Grid Layout)? How have you applied them in your projects?
+
+
+
+Integration with JavaScript and React:--------------------------------------------------------------------------------
+How do you manage dynamic styles or animations in React applications? Give an example of using CSS transitions or animations with React state.
+
+
+
+
+
+
+======================================================CSS QUESTIONS/ANSWERS HERE ====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
