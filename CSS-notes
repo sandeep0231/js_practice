@@ -160,12 +160,15 @@ Material-UI:-  Implements Google's Material Design principles, offering customiz
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-9) 
+9) CSS Modules and Scoped Styles:---
 
+CSS Modules in React:-
+CSS Modules generate unique class names for each component, preventing style conflicts and allowing scoped styles.
+Scoped styles improve encapsulation and maintainability by tying styles closely to specific components.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+10) 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
