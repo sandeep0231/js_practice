@@ -1,0 +1,103 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+index.js ->   
+1) import Provider from 'react-redux';
+
+2)  import store from "./store";
+
+3)    <Provider store ={store}>   
+      </App>
+     </Provider>
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+store.js ->
+
+1)  import {createStore} from  "redux";
+
+2)  import rootReducer  from "./reducer/index";
+
+3)  const store = createStore(rootReducer);
+
+4)  export default store;
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Reducer:--
+
+   reducer name-> Perform.js ->
+                1) const initialState = 0;
+       
+                2) //reducer function  
+			const changeTheNumber = (state = initialState, action) => {
+  			  switch (action.type) {
+      				  case 'INCREMENT':
+       					     return state + action.payload;
+       				 case 'DECREMENT':
+         				   return state - action.payload;
+        			default:
+           				 return state;
+   						 }
+					}
+
+			export default changeTheNumber;
+
+
+
+ 
+  index.js -> here we have to wrap up all reducers -
+
+  			1)  import Performer from "./performer";
+      			    import anotherReducer from "./anotherfile";
+
+
+			2) import combineReducer from "redux";
+			
+			3)  rootReducer = combineReducer({Perform,anotherReducer });
+                       
+                        4) export default rootReducer;
+
+     
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Action ->
+       index.js ->
+       
+       1)  export const inNumber = (num) =>{
+             return {
+                 type:"INCREMENT",
+                 payload:num,
+                 
+                  }
+                
+                 }
+
+ 2) export decNumber =(num) =>{
+          return {
+               type:"DECREMENT",
+               payload:num
+              
+               }     
+           
+          }
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Consume action/store here :--
+ App.js :-
+     
+
+
+   1) import {inNumber,decNumber} from "./Action/index";
+   
+    2) import {useDispatch,useSelector} from "react-redux";
+
+
+     3) const dispatch = useDispatch();
+     4) const GlobalState = useSelector((state)=> state.perform );
+
+
+    5) <button onClick={()=> {dispacth(inNumber(5))} }  > + </button>
+    6) <button onClick={()=>{ dispatch(decNumber(5)) }} > - </button>
+
+
+ 
