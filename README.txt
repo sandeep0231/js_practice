@@ -727,5 +727,8 @@ let newfun1 = printDetails.bind(userDetails2 , ["Noida","India"]);  //point obj2
 let newfun2 = printDetails.bind(userDetails, ["Noida","India"] ); //point obj2
 
 
+//functions invocation 
+newfun1();
+newfun2();
 
 
