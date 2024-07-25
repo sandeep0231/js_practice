@@ -585,7 +585,7 @@ abc.add(4);
 abc.print();
 abc.sub(2);
 abc.print();
-
+ 
 ====================================================
 
 
@@ -596,5 +596,136 @@ function aaa () {
 let b = new aaa();
 
 console.log(b);
+
+=================================================================================================================================================================
+------------------------------------------------CALL APPLY BIND -----------------------------------------------
+=================================================================================================================================================================
+NOTE:-  this :- this keyword is use for self refrencing.
+
+First we have to understand a problem statement :-
+
+let userDetails = {
+ name: "devid",
+age:28,
+designation:"developer"
+printDetails : function() {  console.log(this.name ); }
+}
+
+userDetails.printDetails();
+
+
+let userDetails2 ={
+name:"smith",
+age:30,
+designation:"IT HEAD"
+}
+
+NOTE:-- So the problem statement is i want point a 2nd object for 1st object function or this which is printDetail. so we can not point 2nd object  dicrect  for printDetails
+function which is the property of 1st object so to resolve this problem call,apply and bind comes into a picture.
+
+SOLUTIONS:::---
+
+1) call() :---
+
+Syntax:-  obj1.printDetails.call(obj2);
+--------------------------------------------------------------------------------------
+
+let userDetails = {
+ name: "devid",
+age:28,
+designation:"developer"
+printDetails : function() {  console.log(this.name ); }
+}
+//normal
+userDetails.printDetails();
+
+
+let userDetails2 ={
+name:"smith",
+age:30,
+designation:"IT HEAD"
+}
+
+//function borrowing
+//call
+userDetails.printDetails.call(userDetails2);
+-------------------------------------------------------------------------------------------------------------
+NOTE:-  in that function is inside a obj1 then we do this but what if function will be  outside the object the. 
+
+Senario:-
+  
+let userDetails = {
+ name: "devid",
+age:28,
+designation:"developer"
+}
+
+//outside  declear function //generic function
+let printDetails = function( state,country ) {  console.log(this.name + " " +state+ " "+country ); }
+
+let userDetails2 ={
+name:"smith",
+age:30,
+designation:"IT HEAD"
+}
+ 
+
+//call  :- we can also pass a values  in call like this:
+printDetails.call(userDetails2 , "Noida","India");  //point obj2 
+printDetails.call(userDetails,"Noida","India"); //point obj2
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+apply() :-  Instead of  passing individual agrument one by one we can pass a array with the help of apply.  
+   
+
+let userDetails = {
+ name: "devid",
+age:28,
+designation:"developer"
+}
+
+//outside  declear function //generic function
+let printDetails = function( state,country ) {  console.log(this.name + " " +state+ " "+country ); }
+
+let userDetails2 ={
+name:"smith",
+age:30,
+designation:"IT HEAD"
+}
+
+
+//apply  :- we can pass an array with apply finction:
+printDetails.apply(userDetails2 , ["Noida","India"]);  //point obj2 
+printDetails.apply(userDetails, ["Noida","India"] ); //point obj2
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+bind()::: - bind  is also same like a  call and apply.  The only diffrence is that , in call and apply case we call a function direct but in bind 
+we make a copy of bind and store into a variable and call it further/leter  invocation. 
+
+
+let userDetails = {
+ name: "devid",
+age:28,
+designation:"developer"
+}
+
+//outside  declear function //generic function
+let printDetails = function( state,country ) {  console.log(this.name + " " +state+ " "+country ); }
+
+let userDetails2 ={
+name:"smith",
+age:30,
+designation:"IT HEAD"
+}
+
+
+//bind  :-  
+let newfun1 = printDetails.bind(userDetails2 , ["Noida","India"]);  //point obj2 
+let newfun2 = printDetails.bind(userDetails, ["Noida","India"] ); //point obj2
+
+
 
 
