@@ -1,1 +1,170 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) Every browser has own js engine. -> chrome-> v8 engine, firefox-> spider mankey, safari-> apply js engine.
+#) V8 engine is the most popular engine which is use by chrome.
+#) Ryan Dahl is a developer /creator of Nodejs.
+#) Ryan Dahl extract the v8 engine  from chrome to outside end embeded with c++.
+#) you can run js outside of the browser.
+#) javascript can talk to native machine because of c++.
+#)  You can create website in js language.
+#) Nodejs is a runtime Env. for js.
+#) In nodejs we can not use Windows objects just because of when nodejs is v8 engine is embeded with c++ that time windows dom is remove from a nodejs.
+#) Modules -> When we  divide a  codebase small small module from Our entire code base is called a moduler programing.
 
+#) Default Thread Pool size is = 4;
+#) MAx size is depand on user server core.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##)  Working of Nodejs  /Architect of Nodejs--
+
+#)  Client (Request to the nodejs server) ---> Server(node server)
+
+#) when client request to the nodejs server that time all request goes to first Event Queue  and then there is Event Loop (Machine)  which is continuos
+watch  Event Queue there is reequest comes or not if there is Requested comes from Client then Event loop take/pich up a Request one by one (in FIFO approch/principle).
+When Event loop Pick up a request from Event queue the request whould be two type one is Blocking Opratrions and another is Non-Blocking Oprations. Blocking Opration is 
+also called a Synchronus opration and Non-Blocking  Oprations is called Asynchronus Oprations.
+So Event loop when take a request that time it will first check the request is Blocking opration or Non-blocking opration if request is Non-Blocking  then Event-loop Will
+process it  and further pass or send response to the clinet or user. But if request is blocking opration  so request will go to thread pool( It is a pool of threads,
+thread is just like a  worker who is work for you   ) by Event loop. Thread pool check if thread pool  has  a free worker so then thread pool assign a free worker for
+blocking opration  to perform a blocking task and once it will complete a blocking task it will return a result  and Event loop send this response to the client/user.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) OS module -> it gives the all information about our system or oprating system.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) server cretae in nodejs-
+
+const http = require("http");
+const myServer  = http.createServer((req,res)=>{ console.log("Response from server."); res.end("comes from server."); } );
+myServer.listen(8000,()=>{
+console.log("server running..);
+});
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) URL -> Uniform Resource Locator.
+
+
+var url = require('url');
+This module has utilities for URL resolution and parsing meant to have feature parity with node.js core url module
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) HTTP METHODS -> GET , POST , PUT , PATCH , DELETE .
+
+1) GET -> When you want to get some data from the server. When we open any website that time browser automatically create a get request for a server to fetch or load a 
+default data .
+
+2) POST -> When you want to send and mutate some data in server .
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#) why we need express in nodejs  ?
+
+Express is a popular web framework for Node.js that simplifies building web applications and RESTful APIs. While Node.js provides the core functionality for server-side 
+JavaScript, Express offers additional abstractions and utilities that make development faster and more efficient.
+Here’s why you might need Express when working with Node.js:
+
+1. Simplified Routing
+Node.js: Node.js has a built-in http module for creating servers and handling requests, but routing can become cumbersome and verbose.
+
+Express: Express provides a robust and easy-to-use routing system that allows you to define routes and route handlers more succinctly and clearly.
+
+2. Middleware Support
+Node.js: You can use the http module to handle requests, but integrating middleware (functions that modify requests and responses) requires more manual setup.
+
+Express: Express has a built-in middleware system that allows you to easily add functions to handle tasks like logging, parsing request bodies, handling cookies, and more.
+
+3. Template Rendering
+Node.js: Rendering templates in Node.js requires manually setting up templating engines and managing rendering logic.
+
+Express: Express supports various templating engines (like EJS, Pug, and Handlebars) and makes it easy to render views.
+
+4. Error Handling
+Node.js: Handling errors and sending appropriate responses requires manual setup.
+
+Express: Express provides a standardized way to handle errors with middleware, allowing you to define error-handling logic in a clean and organized manner.
+app.use((req, res, next) => {
+    // Handle 404 errors
+    res.status(404).send('Not Found');
+});
+
+app.use((err, req, res, next) => {
+    // Handle other errors
+    res.status(500).send('Something broke!');
+});
+
+
+5. Route Parameters and Query Strings
+Node.js: Extracting route parameters and query strings from requests requires manually parsing the URL.
+
+Express: Express simplifies working with route parameters and query strings through easy-to-use syntax.
+
+
+6. Built-in Utilities
+Node.js: Some utilities are available, but they may require additional code or libraries.
+
+Express: Express provides built-in utilities for common tasks, such as handling cookies, parsing URL-encoded data, and more.
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+7. Community and Ecosystem
+Node.js: While Node.js itself is very powerful, building full-featured web applications requires many additional libraries and modules.
+
+Express: Express has a large ecosystem of middleware, plugins, and community support, making it easier to extend and enhance your application.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#)  How versioning work in nodejs ?
+ex: - vrsion - 4.18.2
+
+1st part -> 4  //Major Release/update   / Breaking update
+2nd part -> 18  // Recommended Bug Fix ( Security fixex ,or add new features) 
+3rd part -> 2   // Minor Fixes (Optional)
+
+^ (carrot simbal)-->  It use to lock the first number of version if we update our all packages from packages.json file then it will only update a  2nd and 3rd
+number but not first number .
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
