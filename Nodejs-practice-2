@@ -119,13 +119,69 @@ ex: - vrsion - 4.18.2
 
 ^ (carrot simbal)-->  It use to lock the first number of version if we update our all packages from packages.json file then it will only update a  2nd and 3rd
 number but not first number .
-
+Install/update all Recommended and Minor Fixes Automaticallly.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#) REST API / REST FULL API --> Follow the some rules fo API 
+these are rules :
+1) Server Client Architecture: In rest api client will not depend on server server will send json or xml data and  client can render it according to his requriment 
+like mobile device render browser render.
 
+2) Use HTTP Methods Correctly (GET, POST, PUT, PATCH, DELETE )
+
+3) Use Meaningful and Consistent URLs:-
+Resource-Based URLs: URLs should represent resources (nouns) rather than actions (verbs). For example, use /users rather than /getUsers.
+Hierarchical Structure: Use a hierarchical structure for URLs to reflect resource relationships. For example, /users/{userId}/posts to access posts of a specific user.
+Plural Nouns: Use plural nouns for resource names to maintain consistency. For example, /products, /orders.
+
+
+4)  Use Standard HTTP Status Codes:-
+200 OK: The request was successful.
+201 Created: A resource was successfully created.
+204 No Content: The request was successful, but there is no content to send.
+400 Bad Request: The request could not be understood or was missing required parameters.
+401 Unauthorized: Authentication is required and has failed or has not yet been provided.
+403 Forbidden: The server understood the request but refuses to authorize it.
+404 Not Found: The requested resource could not be found.
+500 Internal Server Error: An error occurred on the server.
+
+5) Use Query Parameters for Filtering, Sorting, and Pagination:-
+Filtering: Use query parameters to filter results, e.g., /products?category=electronics.
+Sorting: Use query parameters to specify sorting, e.g., /products?sort=price_asc.
+Pagination: Use query parameters for pagination to handle large sets of data, e.g., /products?page=2&limit=10.
+
+
+6)  Use JSON or XML for Data Formats:-
+JSON: JSON is the most common data format for REST APIs due to its simplicity and ease of use. Use application/json as the content type.
+XML: XML can be used if required, but it is less common compared to JSON. Use application/xml as the content type.
+
+7) Support Versioning:-
+Versioning: Include version information in the URL or headers to ensure backward compatibility and allow for future changes without breaking existing clients. 
+For example, /api/v1/users.
+
+
+8) Secure Your API:-
+Authentication: Use mechanisms like OAuth, JWT, or API keys to secure access to your API.
+Authorization: Implement role-based access control to restrict actions based on user roles or permissions.
+HTTPS: Always use HTTPS to encrypt data transmitted between the client and server.
+
+9) Provide Comprehensive Documentation:-
+API Documentation: Provide clear and thorough documentation for your API, including endpoint descriptions, request and response formats, and status codes.
+Examples: Include examples of request and response payloads to help developers understand how to use the API.
+
+10) Handle Errors Gracefully:-
+Error Responses: Provide meaningful error messages and codes in the response body to help clients diagnose issues. Include information on what went wrong and how to correct it.
+
+example:-
+{
+    "error": {
+        "code": 400,
+        "message": "Invalid request parameter: id must be an integer."
+    }
+}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+#) 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
